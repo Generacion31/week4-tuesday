@@ -1,0 +1,59 @@
+body {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+/* Algoritmo css: Es la forma que tiene el navegador de darle o aplicarles estilos a nuestros documentos HTML. Para entender como lo hace, vamos a tener presente estas tres caracteristicas
+
+1) La cascada
+2) Especificidad
+3) Herencia
+
+*/
+
+
+/* 1) LA CASCADA,
+es el mecanismo por el que el navegador le aplica los estilos a los html. El orden a seguir es el siguiente:
+1) El user Agent(LOS ESTILOS POR DEFECTO QUE APLICA EL NAVEGADOR)
+2) Los estilos especificados por el usuario
+3) Por Especificidad de las reglas
+ */
+h1 {
+  color: red;
+  font-size: 20px;
+}
+
+h1 {
+  color: blue;
+}
+
+* {
+  color: brown;
+}
+
+/* Al mismo nivel de Especificidad, siempre ganara la cascada */
+
+/* 2)Especificidad:
+Basicamente, mide cuan especifica es la seleccion del seletor
+*/
+
+ul li {
+  color: blueviolet;
+}
+
+li {
+  color: green
+}
+
+/* Herencia */
+.contenedor {
+  font-size: 50px;
+  border: 1px solid black;
+}
+
+ul {
+  border: 1px solid green;
+  font-size: initial;
+  font-size: inherit;
+}
